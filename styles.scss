@@ -1,0 +1,46 @@
+// Reset margin and padding for all elements
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Set html and body to take the full height of the viewport
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+// Style the header
+header {
+    height: 50px; // or whatever height you prefer
+    background: #333; // example background color
+    color: white; // example text color
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+// Set main element to use all remaining space
+main {
+    height: calc(100% - 60px); // Adjust based on the header's height including any padding
+    width: 100%;
+
+    // Expand the sketchfab-embed-wrapper to fill the main
+    .sketchfab-embed-wrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        // Make the iframe fill its container
+        iframe {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+    }
+}
